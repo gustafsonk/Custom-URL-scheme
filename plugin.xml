@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="nl.x-services.plugins.launchmyapp"
+        id="com.gustafsonk.plugins.launchmyapp"
         version="3.2.2">
 
   <name>Custom URL scheme</name>
@@ -24,6 +24,7 @@
   <preference name="URL_SCHEME" />
   <preference name="ANDROID_SCHEME" />
   <preference name="ANDROID_HOST" />
+  <preference name="ANDROID_PATH" />
 
   <engines>
     <engine name="cordova" version=">=3.0.0"/>
@@ -63,7 +64,7 @@
 
     <config-file target="AndroidManifest.xml" parent="/*/application/activity">
       <intent-filter>
-        <data android:scheme="$ANDROID_SCHEME" android:host="$ANDROID_HOST" />
+        <data android:scheme="$ANDROID_SCHEME" android:host="$ANDROID_HOST" android:path="$ANDROID_PATH" />
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
